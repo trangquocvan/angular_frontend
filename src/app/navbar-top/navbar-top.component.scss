@@ -1,0 +1,27 @@
+//rgba(33,33,33,0.9)
+.navbar-top{
+  background-color: rgba(33,33,33,0.9);
+  height: 60px;
+  a{
+    color: white;
+  }
+  .icon-navbar-top{
+    height: 100%;
+    width: 50px;
+  }
+  .form-input{
+    color:#fff;
+    border:solid 1px white;
+    background-color:transparent;
+    //&:focus{
+    //  border:solid 1px blueviolet;
+    //}
+  }
+  .from-input-icon{
+    border: 1px solid white;
+  }
+  .header-navbar-top-right{
+    position: absolute;
+    right: 15px;
+  }
+}
