@@ -1,5 +1,5 @@
 import { Component, OnInit, ElementRef, ViewChild   } from '@angular/core';
-
+declare var $ :any;
 @Component({
   selector: 'app-navbar-top',
   templateUrl: './navbar-top.component.html',
@@ -11,7 +11,8 @@ export class NavbarTopComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    $('.ui.dropdown').dropdown();
   }
-  public handleShowPopup() {
+  public showProfile() {
   }
 }
