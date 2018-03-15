@@ -1,4 +1,5 @@
 import { Component,ElementRef,ViewChild,OnInit } from '@angular/core';
+import {TranslateService} from 'ng2-translate';
 declare var $ :any;
 
 @Component({
@@ -12,12 +13,14 @@ export class AppComponent implements OnInit {
     $('.ui.dropdown-ui')
     .modal('show');
   }
-  constructor(){
-    $('#select')
-    .dropdown()
-    ;
+  constructor(private translate: TranslateService){
+    translate.addLangs(['en','vi']);
+    translate.setDefaultLang('vi');
+    let browserlang = translate.getBrowserLang();
+    translate.use(browserlang.match(/vi|en/) ? browserlang: "vi");
   }
   ngOnInit(){
     $('.ui.button').popup();
   }
+  
 }

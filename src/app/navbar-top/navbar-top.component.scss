@@ -2,6 +2,7 @@
 @import '../app.component.scss';
 .navbar-top{
   background-color: $background-color-nav-header;
+  width: 100%;
   height: 60px;
   .icon-navbar-top{
     height: 100%;
@@ -16,16 +17,6 @@
   .header-navbar-top-right{
     position: absolute;
     right: 15px;
-    .arrow{
-      background-image: url(/rsrc.php/v3/y1/r/MA2DfjBTAo4.png);
-      background-repeat: no-repeat;
-      background-size: 28px 1080px;
-      background-position: 0 -872px;
-      height: 11px;
-      position: absolute;
-      top: -11px;
-      width: 20px;
-    }
     .menu{
       margin-top: 0.7em !important;
     }
