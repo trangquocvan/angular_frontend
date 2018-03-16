@@ -4,7 +4,7 @@
                 <div class="col-xl-6" >
                     <div class="form-register thumbnail"  style="box-shadow: 0 0 15px grey;">
                         <form class="form-horizontal" >
-                        <h3 align='center'>Đăng Kí</h3>
+                        <h3 align='center'>{{'register.title'|translate}}</h3>
                         <br />
                         <!-- <label  class="col-lg-3 control-label">Tên Đăng Nhập</label>
                         <div class="col-lg-9">
@@ -49,14 +49,14 @@
                         <div class="col-xl-12">
                             <div class="form-group">
                                     <i class="fa fa-users icon-register" ></i>
-                                    <input type="text" class="form-control" aria-label="Large" placeholder="Tên tài khoản">
+                                    <input type="text" class="form-control" aria-label="Large" placeholder="{{'register.username'|translate}}">
                             </div>
                         </div>
                         
                         <div class="col-xl-12">
                             <div class="form-group">
                                     <i class="fa fa-lock icon-register" ></i>
-                                    <input type="text" class="form-control" aria-label="Large" placeholder="Mật khẩu">
+                                    <input type="password" class="form-control" aria-label="Large" placeholder="{{'register.password'|translate}}">
                             </div>
                         </div>
                         <div class="col-xl-12">
@@ -64,7 +64,7 @@
                                 <div class="ui fluid search selection dropdown">
                                 <input type="hidden" class="form-control" name="country">
                                 <i class="dropdown icon"></i>
-                                <div class="default text">Chọn Quốc Gia</div>
+                                <div class="default text">{{'register.contry'|translate}}</div>
                                 <div class="menu">
                                 <div class="item" data-value="af"><i class="af flag"></i>Afghanistan</div>
                                 <div class="item" data-value="ax"><i class="ax flag"></i>Aland Islands</div>
@@ -330,13 +330,47 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-4">
-                            <select class="ui dropdown dropdown-date" [(ngModel)]="registerLanguage" (change)="handleSelectLanguage('en')">
+                        <div class="col-xl-12 ">
+                            <!-- <select class="ui fluid dropdown float-left padding-right-smail dropdown-date col-xl-4" >
                                     <option value="vi">Ngày</option>
                                     <option value="vi">1</option>
                                     <option value="en">2</option>
                             </select>
+                            <select class="ui fluid dropdown float-left padding-right-center dropdown-date col-xl-4" >
+                                    <option value="vi">Ngày</option>
+                                    <option value="vi">1</option>
+                                    <option value="en">2</option>
+                            </select>
+
+                            <select class="ui fluid dropdown float-left padding-left-smail dropdown-date col-xl-4" >
+                                    <option value="vi">Ngày</option>
+                                    <option value="vi">1</option>
+                                    <option value="en">2</option>
+                            </select> -->
+                            <!-- <div class="col-xl-4">
+                                    <select class="ui fluid dropdown padding-right-smail dropdown-date " >
+                                            <option value="vi">Ngày</option>
+                                            <option value="vi">1</option>
+                                            <option value="en">2</option>
+                                    </select>
+                            </div>
+                            <div class="col-xl-4">
+                                    <select class="ui fluid dropdown padding-right-smail dropdown-date " >
+                                            <option value="vi">Ngày</option>
+                                            <option value="vi">1</option>
+                                            <option value="en">2</option>
+                                    </select>
+                            </div>
+                            <div class="col-xl-4">
+                                    <select class="ui fluid dropdown padding-right-smail dropdown-date " >
+                                            <option value="vi">Ngày</option>
+                                            <option value="vi">1</option>
+                                            <option value="en">2</option>
+                                    </select>
+                            </div> -->
+                           
                         </div>
+                        
                         <!-- <div class="col-lg-6 float-lg-left">
                             <a href="#" >Quên mật khẩu</a>
                         </div> float-lg-right -->
@@ -346,7 +380,7 @@
                         </form>
                     </div>
                     <div class="wrap-bottom-register">
-                        <select class="ui dropdown" [(ngModel)]="registerLanguage" (change)="handleSelectLanguage('en')">
+                        <select class="ui dropdown" [(ngModel)]="registerLanguage" (change)="handleSelectLanguage(registerLanguage)">
                                 <option value="vi">Tiếng Việt</option>
                                 <option value="en">Englist</option>
                         </select>

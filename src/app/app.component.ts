@@ -1,5 +1,7 @@
 import { Component,ElementRef,ViewChild,OnInit } from '@angular/core';
 import {TranslateService} from 'ng2-translate';
+import { AppService } from './app.service';
+
 declare var $ :any;
 
 @Component({
@@ -13,7 +15,7 @@ export class AppComponent implements OnInit {
     $('.ui.dropdown-ui')
     .modal('show');
   }
-  constructor(private translate: TranslateService){
+  constructor(private translate: TranslateService,public AppService:AppService){
     translate.addLangs(['en','vi']);
     translate.setDefaultLang('vi');
     let browserlang = translate.getBrowserLang();
@@ -21,6 +23,10 @@ export class AppComponent implements OnInit {
   }
   ngOnInit(){
     $('.ui.button').popup();
+    this.AppService.change.subscribe(language =>{
+      this.translate.use(language);
+      console.log(language)
+    });
   }
   
 }

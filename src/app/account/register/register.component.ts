@@ -1,6 +1,7 @@
 import {Component, OnInit , EventEmitter, Output } from '@angular/core';
 import { NgModel,NgForm } from '@angular/forms';
 import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
+import { AppService } from '../../app.service';
 declare var $: any;
 @Component({
     selector: 'register',
@@ -11,10 +12,10 @@ export class RegisterComponent implements OnInit{
     ngOnInit(){
         $('.ui.dropdown').dropdown();
     }
-    constructor(){
+    constructor(public AppService : AppService){
 
     }
     handleSelectLanguage(selected:string){
-        console.log(selected)
+        this.AppService.setLanguage(selected);
     }
 }

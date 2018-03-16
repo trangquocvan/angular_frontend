@@ -1,3 +1,4 @@
+//module
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
@@ -5,11 +6,14 @@ import {TranslateService,TranslateStaticLoader,TranslateModule,TranslateLoader} 
 import { HttpModule } from '@angular/http';
 import {Http} from '@angular/http';
 import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
-
+//component
 import { AppComponent } from './app.component';
 import { NavbarTopComponent } from './navbar-top/navbar-top.component';
 import { AccountComponent } from './account/account.component';
 import { RegisterComponent } from './account/register/register.component';
+
+//service
+import { AppService } from './app.service';
 
 export function createTranslateLoader(http: Http) {
   return new TranslateStaticLoader(http, './assets/i18n', '.json');
@@ -38,7 +42,9 @@ export function createTranslateLoader(http: Http) {
       deps: [Http]
     }),
   ],
-  providers: [],
+  providers: [
+    AppService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

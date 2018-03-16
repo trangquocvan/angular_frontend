@@ -1,3 +1,8 @@
 {
-    
+    "register":{
+        "title": "Đăng Ký",
+        "username": "Tên tài khoản",
+        "password": "Mật khẩu",
+        "contry": "Quốc Gia"
+    }
 }
