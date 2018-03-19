@@ -11,9 +11,10 @@ import { AppComponent } from './app.component';
 import { NavbarTopComponent } from './navbar-top/navbar-top.component';
 import { AccountComponent } from './account/account.component';
 import { RegisterComponent } from './account/register/register.component';
-
+import {LoginComponent} from './account/login/login.component';
 //service
 import { AppService } from './app.service';
+import { LoginService } from './services/login.services';
 
 export function createTranslateLoader(http: Http) {
   return new TranslateStaticLoader(http, './assets/i18n', '.json');
@@ -23,7 +24,8 @@ export function createTranslateLoader(http: Http) {
     AppComponent,
     NavbarTopComponent,
     AccountComponent,
-    RegisterComponent
+    RegisterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +34,8 @@ export function createTranslateLoader(http: Http) {
         { path: 'home', redirectTo: 'app-home', pathMatch: 'full' },
         { path: 'account', component: AccountComponent,
           children:[
-            { path: 'register',component: RegisterComponent }
+            { path: 'register',component: RegisterComponent },
+            { path: 'login',component: LoginComponent }
           ]
         }
     ]),

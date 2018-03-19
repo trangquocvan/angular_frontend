@@ -1,51 +1,11 @@
-<div class="row justify-content-center wrap-register">
+<div class="row justify-content-center wrap-form">
         <div class="col-xl-10">
             <div class="row justify-content-center" >
                 <div class="col-xl-6" >
-                    <div class="form-register thumbnail"  style="box-shadow: 0 0 15px grey;">
+                    <div class="content-form thumbnail">
                         <form class="form-horizontal" >
                         <h3 align='center'>{{'register.title'|translate}}</h3>
                         <br />
-                        <!-- <label  class="col-lg-3 control-label">Tên Đăng Nhập</label>
-                        <div class="col-lg-9">
-                            <div class="form-group" ngClass="has-success">
-                            <input type="text" class="form-control" ngModel="register.username"/>
-                            </div>
-                        </div>
-                        <label  class="col-lg-3 control-label">Email</label>
-                        <div class="col-lg-9">
-                            <div class="form-group " ngClass="has-success">
-                            <input type="text" class="form-control" ngModel="register.email">
-                            </div>
-                        </div>
-                        <label  class="col-lg-3 control-label"> Mật khẩu</label>
-                        <div class="col-lg-9">
-                            <div class="form-group" ngClass="has-success">
-                            <input type="text" class="form-control" >
-                            </div>
-                        </div> -->
-                        <!-- <section class="content">
-                        <span class="input input--hoshi">
-                            <input class="input__field input__field--hoshi" type="text" id="input-4" />
-                            <label class="input__label input__label--hoshi input__label--hoshi-color-1" for="input-4">
-                                <span class="input__label-content input__label-content--hoshi">Tài khoản</span>
-                            </label>
-                        </span>
-                        <span class="input input--hoshi">
-                            <input class="input__field input__field--hoshi" type="text" id="input-4" />
-                            <label class="input__label input__label--hoshi input__label--hoshi-color-1" for="input-4">
-                                <span class="input__label-content input__label-content--hoshi">Tài khoản</span>
-                            </label>
-                        </span>
-                        <span class="input input--hoshi">
-                            <input class="input__field input__field--hoshi" type="text" id="input-4" />
-                            <label class="input__label input__label--hoshi input__label--hoshi-color-1" for="input-4">
-                                <span class="input__label-content input__label-content--hoshi">Tài khoản</span>
-                            </label>
-                        </span>
-                        </section> -->
-                        
-
                         <div class="col-xl-12">
                             <div class="form-group">
                                     <i class="fa fa-users icon-register" ></i>
@@ -331,55 +291,13 @@
                             </div>
                         </div>
                         <div class="col-xl-12 ">
-                            <!-- <select class="ui fluid dropdown float-left padding-right-smail dropdown-date col-xl-4" >
-                                    <option value="vi">Ngày</option>
-                                    <option value="vi">1</option>
-                                    <option value="en">2</option>
-                            </select>
-                            <select class="ui fluid dropdown float-left padding-right-center dropdown-date col-xl-4" >
-                                    <option value="vi">Ngày</option>
-                                    <option value="vi">1</option>
-                                    <option value="en">2</option>
-                            </select>
-
-                            <select class="ui fluid dropdown float-left padding-left-smail dropdown-date col-xl-4" >
-                                    <option value="vi">Ngày</option>
-                                    <option value="vi">1</option>
-                                    <option value="en">2</option>
-                            </select> -->
-                            <!-- <div class="col-xl-4">
-                                    <select class="ui fluid dropdown padding-right-smail dropdown-date " >
-                                            <option value="vi">Ngày</option>
-                                            <option value="vi">1</option>
-                                            <option value="en">2</option>
-                                    </select>
-                            </div>
-                            <div class="col-xl-4">
-                                    <select class="ui fluid dropdown padding-right-smail dropdown-date " >
-                                            <option value="vi">Ngày</option>
-                                            <option value="vi">1</option>
-                                            <option value="en">2</option>
-                                    </select>
-                            </div>
-                            <div class="col-xl-4">
-                                    <select class="ui fluid dropdown padding-right-smail dropdown-date " >
-                                            <option value="vi">Ngày</option>
-                                            <option value="vi">1</option>
-                                            <option value="en">2</option>
-                                    </select>
-                            </div> -->
-                           
                         </div>
-                        
-                        <!-- <div class="col-lg-6 float-lg-left">
-                            <a href="#" >Quên mật khẩu</a>
-                        </div> float-lg-right -->
                         <div class="col-xl-12" style="margin-top: 15px;">
                             <button type="button" (click)="handleRegister()" class="btn btn-primary" style="width: 100%;">Đăng Ký</button>
                         </div>
                         </form>
                     </div>
-                    <div class="wrap-bottom-register">
+                    <div class="bottom-form">
                         <select class="ui dropdown" [(ngModel)]="registerLanguage" (change)="handleSelectLanguage(registerLanguage)">
                                 <option value="vi">Tiếng Việt</option>
                                 <option value="en">Englist</option>
