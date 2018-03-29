@@ -1,0 +1,26 @@
+@import "../app.component.scss";
+.card{
+    padding: 15px;
+}
+.card-group .card-header{
+    display: table-caption;
+}
+.card-group .card{
+    border-radius: 0;
+}
+.title{
+    float: right;
+    text-align: right;
+}
+.card-header h3{
+    float: left;
+}
+.card-header{
+    position: relative;
+    top: 15px;
+}
+.card-img-top{
+    max-height: 300px;
+    width: 100%;
+    padding: 15px;
+}

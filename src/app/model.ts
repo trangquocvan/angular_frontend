@@ -1,6 +1,6 @@
 export class User{
-    private username:string;
-    private password:string;
+     username:string;
+     password:string;
 //     private email:string;
 //     private active: number;
 //     private sex: number;

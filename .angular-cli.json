@@ -26,7 +26,8 @@
         "../node_modules/semantic-ui/dist/semantic.css",
         "../node_modules/TextInputEffects/TextInputEffects/css/normalize.css",
         "../node_modules/TextInputEffects/TextInputEffects/css/demo.css",
-        "../node_modules/TextInputEffects/TextInputEffects/css/set1.css"
+        "../node_modules/TextInputEffects/TextInputEffects/css/set1.css",
+        "../node_modules/owl.carousel/dist/assets/owl.carousel.min.css"
       ],
       "scripts": [
         "../node_modules/jquery/dist/jquery.js",
@@ -34,7 +35,9 @@
         "../node_modules/tether/dist/js/tether.js",
         "../node_modules/bootstrap/dist/js/bootstrap.min.js",
         "../node_modules/semantic-ui/dist/semantic.js",
-        "../node_modules/TextInputEffects/TextInputEffects/js/classie.js"
+        "../node_modules/TextInputEffects/TextInputEffects/js/classie.js",
+        "../node_modules/owl.carousel/dist/owl.carousel.min.js"
+        
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {

@@ -3,6 +3,12 @@
         "title": "Sign In",
         "username": "username",
         "password": "password",
-        "contry": "contry"
+        "contry": "contry",
+        "email" : "email",
+        "day" : "day",
+        "month" : "month",
+        "year" : "year",
+        "male" : "Nam",
+        "female" : "Nữ"        
     }
 }

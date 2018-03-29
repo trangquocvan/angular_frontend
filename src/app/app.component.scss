@@ -3,7 +3,131 @@ $background-color-nav-header: rgb(241, 241, 241);
 $color-border-input: #96C8DA;
 $color-animation-input: #007bff;
 $shadow-form: 0 0 15px grey;
+$color-border-error: #d50000;
+$color-border-success: #42A948;
+//INTPUT
 
+// .ng-invalid.ng-dirty{
+//     // border-bottom: 2px solid $color-border-error !important;
+//     .form-control{
+//         border-radius: 0;
+//         border:none;
+//         padding-left: 20px;
+//         background-color: transparent;
+//         border-bottom: 2px solid $color-border-error; 
+//     }
+//     .form-group{
+//         .fa{
+//             color:$color-border-error;
+//         }
+//     }
+// }
+// .ng-pristine{
+//     .form-control{
+//         border-radius: 0;
+//         border:none;
+//         background-color: transparent;
+//         border-bottom: 1px solid $color-border-input;
+//         padding-left: 20px;
+//         &:focus{
+//             animation-name: example;
+//             animation-duration: 0.5s;
+//             border-bottom: 2px solid $color-border-input; 
+//         }
+//     }
+//     .form-group{
+//         &:focus-within .fa{
+//             color:$color-border-input;
+//         }
+//     }
+// }
+.form-default{
+    border-radius: 0;
+    border:none;
+    padding-left: 20px;
+    background-color: transparent;
+    border-bottom: 1px solid $color-border-input;
+    &:focus{
+                animation-name: example;
+                animation-duration: 0.5s;
+                border-bottom: 2px solid $color-border-input; 
+    }
+    
+}
+.form-error{
+    border-radius: 0;
+    border:none;
+    padding-left: 20px;
+    background-color: transparent;
+    border-bottom: 2px solid $color-border-error;
+  
+    
+}
+// .form-control{
+//     border-radius: 0;
+//     border:none;
+//     background-color: transparent;
+//     border-bottom: 2px solid $color-border-input;
+//     padding-left: 20px;
+// }
+// input.ng-pristine {
+//     border-radius: 0;
+//     border:none;
+//     background-color: transparent;
+//     border-bottom: 1px solid $color-border-input;
+//     padding-left: 20px;
+//     &:focus{
+//         animation-name: example;
+//         animation-duration: 0.5s;
+//         border-bottom: 2px solid $color-border-input; 
+//     }
+// }
+
+// input.ng-touched.ng-invalid {
+//     border-radius: 0;
+//     border:none;
+//     padding-left: 20px;
+//     background-color: transparent;
+//     border-bottom: 2px solid $color-border-error; 
+// }
+
+// input.ng-touched.ng-valid{
+//     border-radius: 0;
+//     border:none;
+//     padding-left: 20px;
+//     background-color: transparent;
+//     border-bottom: 2px solid $color-border-success !important; 
+// }
+.price{
+    color: red;
+}
+.icon-check{
+    position: absolute;
+    right: 15px;
+    top: 8px;
+    color: $color-border-success;
+}
+.icon-default{
+    position: absolute;
+    top: 8px;
+    color: $color-border-input;
+}
+.icon-error{
+    position: absolute;
+    top: 8px;
+    color: $color-border-error;
+}
+.icon-success{
+    position: absolute;
+    top: 8px;
+    color: $color-border-success;
+}
+// .icon-success{
+//     color: $color-border-success;
+// }
+// .icon-error{
+//     color: $color-border-error;
+// }
 .margin-top{
     margin-top: 15px;
 }
@@ -71,28 +195,40 @@ $shadow-form: 0 0 15px grey;
             margin-bottom: 0;
         }
     }
-    .form-control{
-        border-radius: 0;
-        border:none;
-        background-color: transparent;
-        border-bottom: 1px solid $color-border-input;
-        padding-left: 20px;
-        &:focus{
-            animation-name: example;
-            animation-duration: 0.5s;
-            border-bottom: 2px solid $color-border-input; 
-        }
-    }
-    .form-group{
-        &:focus-within .icon-register{
-            color:$color-border-input;
-        }
-    }
+    // .form-control-default{
+    //     border-radius: 0;
+    //     border:none;
+    //     background-color: transparent;
+    //     border-bottom: 1px solid $color-border-input;
+    //     padding-left: 20px;
+    //     &:focus{
+    //         animation-name: example;
+    //         animation-duration: 0.5s;
+    //         border-bottom: 2px solid $color-border-input; 
+    //     }
+    // }
+    // .form-control-error{
+    //     border-radius: 0;
+    //     border:none;
+    //     padding-left: 20px;
+    //     background-color: transparent;
+    //     border-bottom: 2px solid $color-border-error; 
+    // }
+    // .form-group{
+    //     &:focus-within .icon-register{
+    //         color:$color-border-input;
+    //     }
+     
+    // }
     .icon-register{
         position: absolute;
         top: 8px;
     }
-  
+    // .icon-error{
+    //     color: $color-border-error;
+    //     position: absolute;
+    //     top: 8px;
+    // }
 }
 .ui.active.selection.dropdown {
     min-width: 100% !important;

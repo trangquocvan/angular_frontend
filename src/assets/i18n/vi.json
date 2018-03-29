@@ -3,7 +3,13 @@
         "title": "Đăng Ký",
         "username": "Tên tài khoản",
         "password": "Mật khẩu",
-        "contry": "Quốc Gia"
+        "contry": "Quốc Gia",
+        "email" : "email",
+        "day" : "Ngày",
+        "month" : "Tháng",
+        "year" : "Năm",
+        "male" : "Nam",
+        "female" : "Nữ"
     },
     "login":{
         "title":"Đăng nhập",

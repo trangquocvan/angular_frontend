@@ -6,15 +6,21 @@ import {TranslateService,TranslateStaticLoader,TranslateModule,TranslateLoader} 
 import { HttpModule } from '@angular/http';
 import {Http} from '@angular/http';
 import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
+import { HttpClientModule } from '@angular/common/http';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 //component
 import { AppComponent } from './app.component';
 import { NavbarTopComponent } from './navbar-top/navbar-top.component';
 import { AccountComponent } from './account/account.component';
 import { RegisterComponent } from './account/register/register.component';
 import {LoginComponent} from './account/login/login.component';
+import {PopUpComponent} from './layout/popup/popup.component';
+import {HomeComponent} from './home/home.component';
 //service
 import { AppService } from './app.service';
 import { LoginService } from './services/login.services';
+import { HttpClient } from '@angular/common/http/src/client';
+import { PopUpServices } from './services/popup.services';
 
 export function createTranslateLoader(http: Http) {
   return new TranslateStaticLoader(http, './assets/i18n', '.json');
@@ -25,7 +31,9 @@ export function createTranslateLoader(http: Http) {
     NavbarTopComponent,
     AccountComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    PopUpComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -37,16 +45,22 @@ export function createTranslateLoader(http: Http) {
             { path: 'register',component: RegisterComponent },
             { path: 'login',component: LoginComponent }
           ]
-        }
+        },
+        { path: 'home',component: HomeComponent }
+        
     ]),
     TranslateModule.forRoot({
       provide: TranslateLoader,
       useFactory: (http: Http) => new TranslateStaticLoader(http, '/assets/i18n', '.json'),
       deps: [Http]
     }),
+    HttpClientModule,
+    NgbModule.forRoot()
   ],
   providers: [
-    AppService
+    AppService,
+    LoginService,
+    PopUpServices
   ],
   bootstrap: [AppComponent]
 })

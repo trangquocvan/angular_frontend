@@ -2,25 +2,33 @@
     <div class="col-xl-10">
         <div class="row justify-content-center" >
             <div class="col-xl-6" >
-                <div class="content-form thumbnail"  style="box-shadow: 0 0 15px grey;">
-                    <form class="form-horizontal" >
+                <div class="content-form thumbnail" >
+                    <form class="form-horizontal"  #userForm="ngForm" novalidate>
                     <h3 align='center'>{{'login.title'|translate}}</h3>
                     <br />
+                    <div class="alert alert-danger" *ngIf="showAlertError"  role="alert">
+                        Tai khoan hoac mat khau khong chinh xac
+                    </div>
                     <div class="col-xl-12">
                         <div class="form-group">
-                                <i class="fa fa-users icon-register" ></i>
-                                <input type="text" [(ngModel)]="user.username" name="username" class="form-control" aria-label="Large" autocomplete="off" placeholder="{{'login.username'|translate}}">
+                                <span class="fa fa-users icon-default" ></span><span *ngIf="username.valid"  class="fa fa-check icon-check" ></span>
+                                <input type="text" [(ngModel)]="user.username" name="username" class="form-control form-default" #username="ngModel" aria-label="Large" autocomplete="off" minlength="4" maxlength="16" 
+                                placeholder="{{'login.username'|translate}}" required >
+                                <!--(username.errors) && (username.dirty || username.touched) ? 'form-control-error' : 'form-control-default'-->
+                                {{username.className}}
                         </div>
                     </div>
-                    
                     <div class="col-xl-12">
                         <div class="form-group">
-                                <i class="fa fa-lock icon-register" ></i>
-                                <input type="password" [(ngModel)]="user.password" name="password" class="form-control" aria-label="Large" placeholder="{{'login.password'|translate}}">
+                                <span class="fa fa-lock icon-default" 
+                                ></span><span *ngIf="password.valid" class="fa fa-check icon-check" ></span>
+                                <input type="password" [(ngModel)]="user.password" name="password" #password="ngModel" class="form-control  form-default" aria-label="Large" 
+                                minlength="4" maxlength="16" 
+                                required placeholder="{{'login.password'|translate}}" required>
                         </div>
                     </div>
                     <div class="col-xl-12" style="margin-top: 15px;">
-                        <button type="button" (click)="handleLogin()" class="btn btn-primary" style="width: 100%;">Đăng Nhập</button>
+                        <button type="button" [disabled]="!userForm.valid" (click)="handleLogin()" class="btn btn-primary" style="width: 100%;">Đăng Nhập</button>
                     </div>
                     </form>
                 </div>
@@ -34,4 +42,3 @@
     </div>
 </div>  
 </div>
-
