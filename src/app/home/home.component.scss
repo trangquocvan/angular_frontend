@@ -1,6 +1,8 @@
 @import "../app.component.scss";
 .card{
     padding: 15px;
+    display: flex;
+    margin-top: 15px;
 }
 .card-group .card-header{
     display: table-caption;
@@ -11,6 +13,9 @@
 .title{
     float: right;
     text-align: right;
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 .card-header h3{
     float: left;
@@ -23,4 +28,7 @@
     max-height: 300px;
     width: 100%;
     padding: 15px;
+}
+.no-border{
+    border: none;
 }

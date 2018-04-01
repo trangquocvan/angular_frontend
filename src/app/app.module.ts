@@ -21,6 +21,10 @@ import { AppService } from './app.service';
 import { LoginService } from './services/login.services';
 import { HttpClient } from '@angular/common/http/src/client';
 import { PopUpServices } from './services/popup.services';
+import { HomeService } from './services/home.services';
+//import shared
+import { SharedModule } from './shared/shared.module';
+
 
 export function createTranslateLoader(http: Http) {
   return new TranslateStaticLoader(http, './assets/i18n', '.json');
@@ -55,12 +59,14 @@ export function createTranslateLoader(http: Http) {
       deps: [Http]
     }),
     HttpClientModule,
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    SharedModule
   ],
   providers: [
     AppService,
     LoginService,
-    PopUpServices
+    PopUpServices,
+    HomeService
   ],
   bootstrap: [AppComponent]
 })

@@ -12,3 +12,29 @@ export class User{
 //         return this.password;
 //     }
 }
+export class Product{
+    idProduct:number;
+    nameProduct:string;
+    price:number;
+    quantity:number;
+    company: company[];
+    status:string;
+    view:number;
+    type:type[];
+    cord: cord[];
+    urlImage: string;
+    lastUpdate:Date;
+
+}
+export class company{
+    idCompany:number;
+    companyName:string;
+}
+export class type{
+    idType:number;
+    nameType:string;
+}
+export class cord{
+    idCord:number;
+    nameCord:string;
+}

@@ -11,3 +11,13 @@ body{
     // font-family: Georgia,"Times New Roman",Times,serif !important;
     background-color: #fff;
 }
+.owl-stage{
+  display: flex ;
+  box-sizing: none;
+}
+.owl-item{
+  display: flex ;
+}
+.owl-item .active{
+  width: 400px !important;
+}

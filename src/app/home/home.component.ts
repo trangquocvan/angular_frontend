@@ -1,4 +1,7 @@
-import { Component,OnInit } from "@angular/core";
+import { Component,OnInit,ViewChild } from "@angular/core";
+import { HomeService } from "../services/home.services";
+import { Product } from '../model';
+
 declare var $: any;
 @Component({
     selector: 'home',
@@ -6,11 +9,13 @@ declare var $: any;
     styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit{
+    products: Product[];
+    constructor(private HomeService:HomeService){
+    }
     ngOnInit(){
         $('.owl-carousel').owlCarousel({
-            loop:true,
-            margin:10,
-            nav:true,
+            nav:false,
+            stagePadding: 0,
             responsive:{
                 0:{
                     items:1
@@ -23,5 +28,18 @@ export class HomeComponent implements OnInit{
                 }
             }
         })
+        this.HomeService.getAll().subscribe(res=>{
+            this.products = res;
+        },error=>{
+            console.log(error)
+        })
+    }
+    left(){
+        var owl = $('.owl-carousel');
+        owl.trigger('prev.owl.carousel', [300]);
+    }
+    right(){
+        var owl = $('.owl-carousel');
+        owl.trigger('next.owl.carousel', [300]);
     }
 }

@@ -1,5 +1,5 @@
 <div class="row justify-content-center wrap-form">
-        <div class="col-xl-10">
+        <div class="col-xl-10 col-sm-8"><!--col-lg-10 col-md-10 col-sm-10-->
             <div class="row justify-content-center" >
                 <div class="col-xl-6" >
                     <div class="content-form thumbnail">
@@ -9,20 +9,25 @@
                         <div class="col-xl-12">
                             <div class="form-group ">
                                     <i class="fa fa-users icon-register"></i>
-                                    <input type="text" class="form-control  " 
+                                    <input type="text" class="form-control " 
                                     placeholder="{{'register.username'|translate}}"
                                     #username="ngModel" [(ngModel)]="user.username"
                                       name="username"
                                     [ngClass]=" ((!username.pristine) && username.invalid)  ? 'form-error' : 'form-default'" autocomplete="off"
-                                    minlength="4" maxlength="16" required
+                                    minlength="4" maxlength="16" required 
                                     >
+                            </div>
+                            <div class="form-group ">
+                                <div *ngIf="((!username.pristine) && username.invalid)" class="message-error">
+                                    tai khoản phải từ 1-10 kí tự
+                                </div>
                             </div>
                         </div>
                         
                         <div class="col-xl-12">
                             <div class="form-group">
                                     <i class="fa fa-lock icon-register" ></i>
-                                    <input type="password" class="form-control  form-default" required 
+                                    <input type="password" class="form-control"  
                                     [ngClass]=" ((!password.pristine) && password.invalid)  ? 'form-error' : 'form-default'" autocomplete="off"
                                     placeholder="{{'register.password'|translate}}"
                                     #password="ngModel" [(ngModel)]="user.password"
@@ -30,23 +35,33 @@
                                     required>
 
                             </div>
+                            <div class="form-group ">
+                                <div *ngIf="((!password.pristine) && password.invalid)" class="message-error">
+                                    tai khoản phải từ 1-10 kí tự
+                                </div>
+                            </div>
                         </div>
                         <div class="col-xl-12">
                             <div class="form-group">
                             <i class="fa fa-envelope icon-register"></i>
-                            <input type="email" class="form-control  form-default" 
+                            <input type="email" class="form-control" 
                             required aria-label="Large" placeholder="{{'register.email'|translate}}"
                             pattern='^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$'
                             [ngClass]=" ((!email.pristine) && email.invalid)  ? 'form-error' : 'form-default'" autocomplete="off"
                             #email="ngModel" name="email" 
                             [(ngModel)]="user.email"
-                            >                        
-                            </div>    
+                            >  
+                            </div>
+                            <div class="form-group ">
+                                <div *ngIf="((!email.pristine) && email.invalid)" class="message-error">
+                                    email phải có dạng abc@xyz.com
+                                </div>    
+                            </div>
                         </div>
                         <div class="col-xl-12">
                             <div class="form-group">
                                 <div class="ui fluid search selection dropdown">
-                                <input type="hidden" class="form-control" name="country">
+                                <input type="hidden" class="form-control" name="country" #country [(ngModel)]="user.country" required>
                                 <i class="dropdown icon"></i>
                                 <div class="default text">{{'register.contry'|translate}}</div>
                                 <div class="menu">
@@ -76,7 +91,7 @@
                         </div>
                         <div class="col-xl-4" style="float: left; position: relative;z-index: 2;">
                                 <div class="ui fluid search selection dropdown">
-                                        <input type="hidden" class="form-control" name="country">
+                                        <input type="hidden" class="form-control" name="country" maxlength >
                                         <i class="dropdown icon"></i>
                                         <div class="default text">{{'register.day'|translate}}</div>
                                         <div class="menu">
@@ -105,7 +120,7 @@
                                         </div>
                                 </div>
                         </div>
-                     
+                        
                         <div class="col-xl-12" style="margin-top: 15px;">
                             <button type="button" [disabled]="!userForm.valid" (click)="handleRegister()" class="btn btn-primary" style="width: 100%;margin-top: 25px;">Đăng Ký</button>
                         </div>

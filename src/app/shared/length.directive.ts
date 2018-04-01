@@ -2,12 +2,12 @@
 import { Directive, ElementRef, Renderer } from '@angular/core';
 
 // Directive decorator
-@Directive({ selector: '[form]' })
+@Directive({ selector: '[maxlength]' })
 // Directive class
-export class FormDirective {
+export class MaxLengthDirective {
     constructor(el: ElementRef, renderer: Renderer) {
      // Use renderer to render the element with styles
-        renderer.setElementAttribute(el.nativeElement,'maxlength','16');
-        console.log(el.nativeElement.className);
+        renderer.setElementAttribute(el.nativeElement,'maxlength','2');
+        
     }
 }
