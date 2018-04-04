@@ -65,7 +65,6 @@
                                         <option value="vi"><i class="vn flag"></i>VietNam</option>
                                         <option value="en"><i class="gb flag"></i>England</option>
                                 </select>
-                                {{user.country}}
                             </div>
                         </div>
                      
@@ -106,7 +105,7 @@
                         <div class="col-xl-12">
                                     <input type='text' class='datepicker-here form-control' data-language='en' pattern="(0[1-9]|1[0-9]|2[0-9]|3[01]).(0[1-9]|1[012]).[0-9]{4}"  #date="ngModel" [(ngModel)]="user.date" name="date"
                                     [ngClass]=" ((!date.pristine) && date.invalid)  ? 'form-border-error' : ''"
-                                    required placeholder="{{'register.date'|translate}}"/>                            
+                                     placeholder="{{'register.date'|translate}}" [(ngModel)]="user.date" name="date"/>                            
                         </div>
                         <div class="col-xl-12" style="margin-top: 15px;">
                             <button type="button" [disabled]="!userForm.valid" (click)="handleRegister()" class="btn btn-primary" style="width: 100%;margin-top: 25px;background:linear-gradient(40deg,#007bff,#7873f5)!important;border: none;">Đăng Ký</button>

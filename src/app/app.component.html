@@ -1,2 +1,12 @@
 <app-navbar-top></app-navbar-top>
 <router-outlet></router-outlet>
+<!-- <ng-progress
+[positionUsing]="'marginLeft'"
+[direction]="'leftToRightIncreased'"
+[color]="'#4286f4'"
+[trickleSpeed]="500" 
+[thick]="true" 
+[ease]="'easeInSine'"
+></ng-progress> -->
+<top-home></top-home>
+<ng-progress #progressBar (started)="onStarted()" (completed)="onCompleted()"></ng-progress>

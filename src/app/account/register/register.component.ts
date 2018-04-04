@@ -42,9 +42,6 @@ export class RegisterComponent implements OnInit {
         // $('.ui.dropdown.day').dropdown("set selected", "01");
         // $('.ui.dropdown.month').dropdown("set selected", "11");
         // $('.ui.dropdown.year').dropdown("set selected", 1990);
-        $('#example2').calendar({
-            type: 'date'
-        });
         
     }
     constructor(public AppService: AppService, private RegisterServices: RegisterServices,private confirmationService:ConfirmationService) {
@@ -64,13 +61,13 @@ export class RegisterComponent implements OnInit {
         birdDay: this.date.year + '' +this.date.month + '' + this.date.day
     };
 
-    handleChangeCountry(name) {
-        var currentUser = $('.selection.dropdown.day').dropdown('get value');
-        console.log(currentUser);        
-    }
-    handleChangeDay(name:string){
-        console.log(name)
-    }
+    // handleChangeCountry(name) {
+    //     var currentUser = $('.selection.dropdown.day').dropdown('get value');
+    //     console.log(currentUser);        
+    // }
+    // handleChangeDay(name:string){
+    //     console.log(name)
+    // }
     handleSelectLanguage(selected: string) {
         this.AppService.setLanguage(selected);
     }
@@ -82,9 +79,6 @@ export class RegisterComponent implements OnInit {
 
         }, error => {
             console.log("ko thanh cong")
-            // $("#myModal").modal();
-            // $('#myModal').modal('show');
-            // $('#myModal').data('bs.modal').$backdrop.css('background-color', 'orange')
             this.display = true;
             this.confirmationService.confirm({
                 message: 'Are you sure that you want to perform this action?',

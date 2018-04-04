@@ -1,8 +1,8 @@
-import { Component,ElementRef,ViewChild,OnInit } from '@angular/core';
-import {TranslateService} from 'ng2-translate';
+import { Component, ElementRef, ViewChild, OnInit } from '@angular/core';
+import { TranslateService } from 'ng2-translate';
 import { AppService } from './app.service';
 
-declare var $ :any;
+declare var $: any;
 
 @Component({
   selector: 'app-root',
@@ -11,22 +11,38 @@ declare var $ :any;
 })
 export class AppComponent implements OnInit {
   title = 'app';
-  public handleShowPopup(count){
+  startedClass = false;
+  completedClass = false;
+  preventAbuse = false;
+  public handleShowPopup(count) {
     $('.ui.dropdown-ui')
-    .modal('show');
+      .modal('show');
   }
-  constructor(private translate: TranslateService,public AppService:AppService){
-    translate.addLangs(['en','vi']);
+
+  constructor(private translate: TranslateService, public AppService: AppService) {
+    translate.addLangs(['en', 'vi']);
     translate.setDefaultLang('vi');
     let browserlang = translate.getBrowserLang();
-    translate.use(browserlang.match(/vi|en/) ? browserlang: "vi");
+    translate.use(browserlang.match(/vi|en/) ? browserlang : "vi");
   }
-  ngOnInit(){
+  ngOnInit() {
     $('.ui.button').popup();
-    this.AppService.change.subscribe(language =>{
+    this.AppService.change.subscribe(language => {
       this.translate.use(language);
       console.log(language)
     });
   }
-  
+  onStarted() {
+    this.startedClass = true;
+    setTimeout(() => {
+      this.startedClass = false;
+    }, 800);
+  }
+
+  onCompleted() {
+    this.completedClass = true;
+    setTimeout(() => {
+      this.completedClass = false;
+    }, 800);
+  }
 }

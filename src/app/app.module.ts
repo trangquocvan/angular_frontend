@@ -14,6 +14,10 @@ import {DialogModule} from 'primeng/dialog';
 import {ConfirmDialogModule} from 'primeng/confirmdialog';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
+import { NgHttpLoaderModule } from 'ng-http-loader/ng-http-loader.module'; 
+import { NgProgressModule } from '@ngx-progressbar/core';
+import { NgProgressHttpModule } from '@ngx-progressbar/http';
+
 
 //api
 //component
@@ -23,6 +27,8 @@ import { AccountComponent } from './account/account.component';
 import { RegisterComponent } from './account/register/register.component';
 import {LoginComponent} from './account/login/login.component';
 import {PopUpComponent} from './layout/popup/popup.component';
+import {TopHomeComponent} from './layout/top-home/top-home.component';
+
 import {HomeComponent} from './home/home.component';
 //service
 import { AppService } from './app.service';
@@ -49,7 +55,8 @@ export function createTranslateLoader(http: Http) {
     RegisterComponent,
     LoginComponent,
     PopUpComponent,
-    HomeComponent
+    HomeComponent,
+    TopHomeComponent
   ],
   imports: [
     BrowserModule,
@@ -73,10 +80,13 @@ export function createTranslateLoader(http: Http) {
       deps: [Http]
     }),
     HttpClientModule,
+    NgHttpLoaderModule,
     NgbModule.forRoot(),
     AccordionModule,
     DialogModule,
     ConfirmDialogModule,
+    NgProgressModule.forRoot(),
+    NgProgressHttpModule,    
     SharedModule
   ],
   providers: [

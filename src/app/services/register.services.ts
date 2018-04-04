@@ -13,7 +13,14 @@ export class RegisterServices{
     url:string = "'https://jsonplaceholder.typicode.com/posts";
     constructor(private http:HttpClient){
     }
+    private showLoader(): void {
+        console.log('Show loader');
+    }
+    private hideLoader(): void {
+        console.log('Hide loader');
+    }
     Register(User:User):Observable<User[]>{
         return this.http.post<User[]>(this.url,User,httpOptions);
     }
+
 }
