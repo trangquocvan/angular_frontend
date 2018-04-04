@@ -72,3 +72,25 @@
 //     min-width: 100% !important;
 // }    "
 @import "../../app.component.scss";
+
+.modal{
+    opacity: 1;
+    background-color: transparent;
+}
+.content-form{
+    // background-image: url("http://atgbcentral.com/data/out/151/5294924-dark-image.jpg");
+    // background-image: url("http://ashui.com/mag/images/stories/201604/RiverCity1.jpg");
+    // color: white;
+}
+// ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+//     color: white;
+//     opacity: 1; /* Firefox */
+// }
+
+// :-ms-input-placeholder { /* Internet Explorer 10-11 */
+//     color: white;
+// }
+
+// ::-ms-input-placeholder { /* Microsoft Edge */
+//     color: white;
+// }

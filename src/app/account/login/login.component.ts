@@ -7,6 +7,8 @@ import { PopUpServices } from '../../services/popup.services';
 import { PopUpComponent } from '../../layout/popup/popup.component';
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 import { EventCommonServices } from '../../services/common/event.common.services';
+import { AppService } from '../../app.service';
+
 
 declare var $: any;
 @Component({
@@ -22,7 +24,7 @@ export class LoginComponent implements OnInit{
         $('.ui.dropdown').dropdown();
     }
     constructor(private LoginService: LoginService, private PopUpServices: PopUpServices,
-        private modalService: NgbModal){
+        private modalService: NgbModal,private AppService:AppService){
     }
     user: User = {
         username: '',
@@ -44,5 +46,8 @@ export class LoginComponent implements OnInit{
         this.LoginService.Login(this.user).subscribe(res =>{
             console.log(res);
         })
+    }
+    handleSelectLanguage(selected:string){
+        this.AppService.setLanguage(selected);
     }
 }   

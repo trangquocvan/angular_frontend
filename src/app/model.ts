@@ -1,16 +1,16 @@
 export class User{
-     username:string;
-     password:string;
-//     private email:string;
-//     private active: number;
-//     private sex: number;
-//     private role: number;
-//     public getUsername():string{
-//         return this.username;
-//     }
-//     public getPassword():string{
-//         return this.password;
-//     }
+    username:string;
+    password:string;
+
+}
+export class Register{
+    username:string;
+    password:string;
+    email:string;
+    active: number;
+    sex: number;
+    country: string;
+    birdDay: string;
 }
 export class Product{
     idProduct:number;
@@ -37,4 +37,13 @@ export class type{
 export class cord{
     idCord:number;
     nameCord:string;
+}
+export class role{
+    idRole:number;
+    nameRole:string;
+}
+export class Date{
+    day:string;
+    month:string;
+    year:string;
 }

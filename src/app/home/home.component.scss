@@ -2,7 +2,6 @@
 .card{
     padding: 15px;
     display: flex;
-    margin-top: 15px;
 }
 .card-group .card-header{
     display: table-caption;
@@ -17,12 +16,14 @@
     display: flex;
     align-items: center;
 }
-.card-header h3{
-    float: left;
+.card-header span{
+    padding: 5px;
+    position: absolute;
 }
 .card-header{
     position: relative;
-    top: 15px;
+    // top: 15px;
+    width: 100%;
 }
 .card-img-top{
     max-height: 300px;
@@ -31,4 +32,7 @@
 }
 .no-border{
     border: none;
+}
+.wrap-card{
+    box-shadow: 0 0px 15px rgba(0, 0, 0, 0.2);
 }

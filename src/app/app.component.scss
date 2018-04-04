@@ -60,44 +60,11 @@ $color-border-success: #42A948;
     padding-left: 20px;
     background-color: transparent;
     border-bottom: 2px solid $color-border-error;
-  
-    
 }
-// .form-control{
-//     border-radius: 0;
-//     border:none;
-//     background-color: transparent;
-//     border-bottom: 2px solid $color-border-input;
-//     padding-left: 20px;
-// }
-// input.ng-pristine {
-//     border-radius: 0;
-//     border:none;
-//     background-color: transparent;
-//     border-bottom: 1px solid $color-border-input;
-//     padding-left: 20px;
-//     &:focus{
-//         animation-name: example;
-//         animation-duration: 0.5s;
-//         border-bottom: 2px solid $color-border-input; 
-//     }
-// }
+.form-border-error{
+    border-color:  $color-border-error;
 
-// input.ng-touched.ng-invalid {
-//     border-radius: 0;
-//     border:none;
-//     padding-left: 20px;
-//     background-color: transparent;
-//     border-bottom: 2px solid $color-border-error; 
-// }
-
-// input.ng-touched.ng-valid{
-//     border-radius: 0;
-//     border:none;
-//     padding-left: 20px;
-//     background-color: transparent;
-//     border-bottom: 2px solid $color-border-success !important; 
-// }
+}
 .price{
     color: red;
 }
@@ -211,4 +178,13 @@ $color-border-success: #42A948;
 .ui.active.selection.dropdown {
     min-width: 100% !important;
 }    
-
+.form-date-left{
+    float: left;
+    position: relative;
+    z-index: 2;
+}
+.form-date-right{
+    float: right;
+    position: relative;
+    z-index: 2;
+}

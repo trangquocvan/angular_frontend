@@ -8,7 +8,13 @@
         "day" : "day",
         "month" : "month",
         "year" : "year",
-        "male" : "Nam",
-        "female" : "Nữ"        
+        "male" : "male",
+        "female" : "female",
+        "date": "bird day"       
+    },
+    "login":{
+        "title":"Login",
+        "username" : "username",
+        "password" : "password"
     }
 }

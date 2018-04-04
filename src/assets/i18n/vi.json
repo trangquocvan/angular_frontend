@@ -9,7 +9,9 @@
         "month" : "Tháng",
         "year" : "Năm",
         "male" : "Nam",
-        "female" : "Nữ"
+        "female" : "Nữ",
+        "date": "Ngày tháng năm sinh"       
+        
     },
     "login":{
         "title":"Đăng nhập",
